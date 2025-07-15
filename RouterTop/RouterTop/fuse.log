@@ -1,0 +1,30 @@
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o /home/chacha/Router1x3/RouterTop/RouterTop/router_top_tb_isim_beh.exe -prj /home/chacha/Router1x3/RouterTop/RouterTop/router_top_tb_beh.prj work.router_top_tb work.glbl 
+ISim P.20131013 (signature 0xfbc00daa)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "/home/chacha/Router1x3/RouterTop/RouterTop/../../Synchronizer/router_syn_code/router_syn.v" into library work
+Analyzing Verilog file "/home/chacha/Router1x3/RouterTop/RouterTop/../../Register/router_register_code/router_register.v" into library work
+Analyzing Verilog file "/home/chacha/Router1x3/RouterTop/RouterTop/../../FSM/router_fsm_code/router_fsm.v" into library work
+Analyzing Verilog file "/home/chacha/Router1x3/RouterTop/RouterTop/../../FIFO/router_fifo_code/router_fifo.v" into library work
+Analyzing Verilog file "/home/chacha/Router1x3/RouterTop/RouterTop/../router_top_code/router_top.v" into library work
+Analyzing Verilog file "/home/chacha/Router1x3/RouterTop/RouterTop/../router_top_code/router_top_tb.v" into library work
+Analyzing Verilog file "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 83104 KB
+Fuse CPU Usage: 970 ms
+Compiling module router_fsm
+Compiling module router_syn
+Compiling module router_register
+Compiling module router_fifo
+Compiling module router_top
+Compiling module router_top_tb
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 2 sub-compilation(s) to finish...
+Compiled 7 Verilog Units
+Built simulation executable /home/chacha/Router1x3/RouterTop/RouterTop/router_top_tb_isim_beh.exe
+Fuse Memory Usage: 643744 KB
+Fuse CPU Usage: 1030 ms
+GCC CPU Usage: 920 ms

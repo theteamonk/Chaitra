@@ -1,0 +1,5 @@
+verilog work "../../Synchronizer/router_syn_code/router_syn.v"
+verilog work "../../Register/router_register_code/router_register.v"
+verilog work "../../FSM/router_fsm_code/router_fsm.v"
+verilog work "../../FIFO/router_fifo_code/router_fifo.v"
+verilog work "../router_top_code/router_top.v"

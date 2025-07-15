@@ -1,0 +1,9 @@
+xst -intstyle ise -ifn "/home/chacha/Router1x3/RouterTop/RouterTop/router_top.xst" -ofn "/home/chacha/Router1x3/RouterTop/RouterTop/router_top.syr" 
+xst -intstyle ise -ifn "/home/chacha/Router1x3/RouterTop/RouterTop/router_top.xst" -ofn "/home/chacha/Router1x3/RouterTop/RouterTop/router_top.syr" 
+xst -intstyle ise -ifn "/home/chacha/Router1x3/RouterTop/RouterTop/router_top.xst" -ofn "/home/chacha/Router1x3/RouterTop/RouterTop/router_top.syr" 
+xst -intstyle ise -ifn "/home/chacha/Router1x3/RouterTop/RouterTop/router_top.xst" -ofn "/home/chacha/Router1x3/RouterTop/RouterTop/router_top.syr" 
+xst -intstyle ise -ifn "/home/chacha/Router1x3/RouterTop/RouterTop/router_top.xst" -ofn "/home/chacha/Router1x3/RouterTop/RouterTop/router_top.syr" 
+xst -intstyle ise -ifn "/home/chacha/Router1x3/RouterTop/RouterTop/router_top.xst" -ofn "/home/chacha/Router1x3/RouterTop/RouterTop/router_top.syr" 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim router_top.ngc router_top_synthesis.v 
+xst -intstyle ise -ifn "/home/chacha/Router1x3/RouterTop/RouterTop/router_top.xst" -ofn "/home/chacha/Router1x3/RouterTop/RouterTop/router_top.syr" 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim router_top.ngc router_top_synthesis.v 

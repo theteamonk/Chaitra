@@ -1,0 +1,608 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.00 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.00 secs
+ 
+--> 
+Reading design: router_top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "router_top.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "router_top"
+Output Format                      : NGC
+Target Device                      : xc6slx4-3-tqg144
+
+---- Source Options
+Top Module Name                    : router_top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/chacha/Router1x3/Synchronizer/router_syn_code/router_syn.v" into library work
+Parsing module <router_syn>.
+Analyzing Verilog file "/home/chacha/Router1x3/Register/router_register_code/router_register.v" into library work
+Parsing module <router_register>.
+Analyzing Verilog file "/home/chacha/Router1x3/FSM/router_fsm_code/router_fsm.v" into library work
+Parsing module <router_fsm>.
+Analyzing Verilog file "/home/chacha/Router1x3/FIFO/router_fifo_code/router_fifo.v" into library work
+Parsing module <router_fifo>.
+Analyzing Verilog file "/home/chacha/Router1x3/RouterTop/router_top_code/router_top.v" into library work
+Parsing module <router_top>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <router_top>.
+
+Elaborating module <router_fsm>.
+
+Elaborating module <router_syn>.
+
+Elaborating module <router_register>.
+
+Elaborating module <router_fifo>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <router_top>.
+    Related source file is "/home/chacha/Router1x3/RouterTop/router_top_code/router_top.v".
+    Summary:
+	no macro.
+Unit <router_top> synthesized.
+
+Synthesizing Unit <router_fsm>.
+    Related source file is "/home/chacha/Router1x3/FSM/router_fsm_code/router_fsm.v".
+        DECODE_ADDRESS = 3'b000
+        WAIT_TILL_EMPTY = 3'b001
+        LOAD_FIRST_DATA = 3'b010
+        LOAD_DATA = 3'b011
+        LOAD_PARITY = 3'b100
+        FIFO_FULL_STATE = 3'b101
+        LOAD_AFTER_FULL = 3'b110
+        CHECK_PARITY_ERROR = 3'b111
+    Found 3-bit register for signal <present_state>.
+    Found 2-bit register for signal <addr>.
+    Found finite state machine <FSM_0> for signal <present_state>.
+    -----------------------------------------------------------------------
+    | States             | 8                                              |
+    | Transitions        | 25                                             |
+    | Inputs             | 8                                              |
+    | Outputs            | 8                                              |
+    | Clock              | clock (rising_edge)                            |
+    | Reset              | resetn_INV_2_o (positive)                      |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 000                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred   2 D-type flip-flop(s).
+	inferred   1 Finite State Machine(s).
+Unit <router_fsm> synthesized.
+
+Synthesizing Unit <router_syn>.
+    Related source file is "/home/chacha/Router1x3/Synchronizer/router_syn_code/router_syn.v".
+    Found 5-bit register for signal <count_0>.
+    Found 1-bit register for signal <soft_reset_0>.
+    Found 5-bit register for signal <count_1>.
+    Found 1-bit register for signal <soft_reset_1>.
+    Found 5-bit register for signal <count_2>.
+    Found 1-bit register for signal <soft_reset_2>.
+    Found 2-bit register for signal <temp>.
+    Found 5-bit adder for signal <count_0[4]_GND_3_o_add_9_OUT> created at line 110.
+    Found 5-bit adder for signal <count_1[4]_GND_3_o_add_17_OUT> created at line 141.
+    Found 5-bit adder for signal <count_2[4]_GND_3_o_add_25_OUT> created at line 172.
+    Found 4x3-bit Read Only RAM for signal <temp[1]_GND_3_o_wide_mux_5_OUT>
+    Found 1-bit 4-to-1 multiplexer for signal <fifo_full> created at line 64.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred  20 D-type flip-flop(s).
+	inferred   8 Multiplexer(s).
+Unit <router_syn> synthesized.
+
+Synthesizing Unit <router_register>.
+    Related source file is "/home/chacha/Router1x3/Register/router_register_code/router_register.v".
+    Found 1-bit register for signal <err>.
+    Found 1-bit register for signal <parity_done>.
+    Found 1-bit register for signal <low_pkt_valid>.
+    Found 8-bit register for signal <fifo_full_state>.
+    Found 8-bit register for signal <header_byte>.
+    Found 8-bit register for signal <internal_parity>.
+    Found 8-bit register for signal <pkt_parity>.
+    Found 8-bit register for signal <data_out>.
+    Found 8-bit comparator not equal for signal <n0005> created at line 77
+    Summary:
+	inferred  43 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   4 Multiplexer(s).
+Unit <router_register> synthesized.
+
+Synthesizing Unit <router_fifo>.
+    Related source file is "/home/chacha/Router1x3/FIFO/router_fifo_code/router_fifo.v".
+        width = 9
+        depth = 16
+    Found 144-bit register for signal <n0092[143:0]>.
+    Found 5-bit register for signal <wr_ptr>.
+    Found 7-bit register for signal <count>.
+    Found 8-bit register for signal <Z_5_o_dff_55_OUT>.
+    Found 1-bit register for signal <resetn_clock_DFF_177>.
+    Found 5-bit register for signal <rd_ptr>.
+    Found 1-bit register for signal <temp>.
+    Found 7-bit subtractor for signal <count[6]_GND_5_o_sub_38_OUT> created at line 111.
+    Found 5-bit adder for signal <wr_ptr[4]_GND_5_o_add_23_OUT> created at line 90.
+    Found 7-bit adder for signal <n0134> created at line 107.
+    Found 5-bit adder for signal <rd_ptr[4]_GND_5_o_add_46_OUT> created at line 138.
+    Found 1-bit 16-to-1 multiplexer for signal <GND_5_o_GND_5_o_equal_35_o> created at line 106.
+    Found 6-bit 16-to-1 multiplexer for signal <rd_ptr[3]_mem[15][7]_wide_mux_35_OUT> created at line 107.
+    Found 8-bit 16-to-1 multiplexer for signal <rd_ptr[3]_mem[15][7]_wide_mux_45_OUT> created at line 137.
+    Found 1-bit tristate buffer for signal <data_out<7>> created at line 121
+    Found 1-bit tristate buffer for signal <data_out<6>> created at line 121
+    Found 1-bit tristate buffer for signal <data_out<5>> created at line 121
+    Found 1-bit tristate buffer for signal <data_out<4>> created at line 121
+    Found 1-bit tristate buffer for signal <data_out<3>> created at line 121
+    Found 1-bit tristate buffer for signal <data_out<2>> created at line 121
+    Found 1-bit tristate buffer for signal <data_out<1>> created at line 121
+    Found 1-bit tristate buffer for signal <data_out<0>> created at line 121
+    Found 5-bit comparator equal for signal <empty> created at line 41
+    Found 1-bit comparator not equal for signal <n0001> created at line 51
+    Found 4-bit comparator equal for signal <wr_ptr[3]_rd_ptr[3]_equal_3_o> created at line 51
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred 171 D-type flip-flop(s).
+	inferred   3 Comparator(s).
+	inferred  36 Multiplexer(s).
+	inferred   8 Tristate(s).
+Unit <router_fifo> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 4x3-bit single-port Read Only RAM                     : 1
+# Adders/Subtractors                                   : 12
+ 5-bit adder                                           : 9
+ 7-bit addsub                                          : 3
+# Registers                                            : 37
+ 1-bit register                                        : 12
+ 144-bit register                                      : 3
+ 2-bit register                                        : 2
+ 5-bit register                                        : 9
+ 7-bit register                                        : 3
+ 8-bit register                                        : 8
+# Comparators                                          : 10
+ 1-bit comparator not equal                            : 3
+ 4-bit comparator equal                                : 3
+ 5-bit comparator equal                                : 3
+ 8-bit comparator not equal                            : 1
+# Multiplexers                                         : 120
+ 1-bit 16-to-1 multiplexer                             : 3
+ 1-bit 2-to-1 multiplexer                              : 48
+ 1-bit 4-to-1 multiplexer                              : 1
+ 3-bit 2-to-1 multiplexer                              : 1
+ 5-bit 2-to-1 multiplexer                              : 6
+ 6-bit 16-to-1 multiplexer                             : 3
+ 7-bit 2-to-1 multiplexer                              : 3
+ 8-bit 16-to-1 multiplexer                             : 3
+ 8-bit 2-to-1 multiplexer                              : 52
+# Tristates                                            : 24
+ 1-bit tristate buffer                                 : 24
+# FSMs                                                 : 1
+# Xors                                                 : 1
+ 8-bit xor2                                            : 1
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <router_fifo>.
+The following registers are absorbed into counter <rd_ptr>: 1 register on signal <rd_ptr>.
+The following registers are absorbed into counter <wr_ptr>: 1 register on signal <wr_ptr>.
+Unit <router_fifo> synthesized (advanced).
+
+Synthesizing (advanced) Unit <router_syn>.
+INFO:Xst:3212 - HDL ADVISOR - Asynchronous or synchronous initialization of the register <temp> prevents it from being combined with the RAM <Mram_temp[1]_GND_3_o_wide_mux_5_OUT> for implementation as read-only block RAM.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 3-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <temp>          |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <router_syn> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 4x3-bit single-port distributed Read Only RAM         : 1
+# Adders/Subtractors                                   : 6
+ 5-bit adder                                           : 3
+ 7-bit addsub                                          : 3
+# Counters                                             : 6
+ 5-bit up counter                                      : 6
+# Registers                                            : 548
+ Flip-Flops                                            : 548
+# Comparators                                          : 10
+ 1-bit comparator not equal                            : 3
+ 4-bit comparator equal                                : 3
+ 5-bit comparator equal                                : 3
+ 8-bit comparator not equal                            : 1
+# Multiplexers                                         : 509
+ 1-bit 16-to-1 multiplexer                             : 27
+ 1-bit 2-to-1 multiplexer                              : 469
+ 1-bit 4-to-1 multiplexer                              : 1
+ 3-bit 2-to-1 multiplexer                              : 1
+ 5-bit 2-to-1 multiplexer                              : 6
+ 6-bit 16-to-1 multiplexer                             : 3
+ 8-bit 2-to-1 multiplexer                              : 2
+# FSMs                                                 : 1
+# Xors                                                 : 1
+ 8-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <fsm/FSM_0> on signal <present_state[1:3]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 000
+ 001   | 001
+ 010   | 011
+ 011   | 010
+ 100   | 110
+ 101   | 111
+ 111   | 101
+ 110   | 100
+-------------------
+INFO:Xst:2261 - The FF/Latch <fifo_2/temp> in Unit <router_top> is equivalent to the following 2 FFs/Latches, which will be removed : <fifo_1/temp> <fifo_0/temp> 
+
+Optimizing unit <router_top> ...
+
+Optimizing unit <router_register> ...
+
+Optimizing unit <router_fsm> ...
+
+Optimizing unit <router_syn> ...
+INFO:Xst:2261 - The FF/Latch <fsm/addr_0> in Unit <router_top> is equivalent to the following FF/Latch, which will be removed : <synchronizer/temp_0> 
+INFO:Xst:2261 - The FF/Latch <fsm/addr_1> in Unit <router_top> is equivalent to the following FF/Latch, which will be removed : <synchronizer/temp_1> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block router_top, actual ratio is 52.
+FlipFlop fifo_0/rd_ptr_0 has been replicated 1 time(s)
+FlipFlop fifo_0/rd_ptr_1 has been replicated 1 time(s)
+FlipFlop fifo_0/wr_ptr_0 has been replicated 1 time(s)
+FlipFlop fifo_0/wr_ptr_1 has been replicated 1 time(s)
+FlipFlop fifo_0/wr_ptr_2 has been replicated 1 time(s)
+FlipFlop fifo_0/wr_ptr_3 has been replicated 1 time(s)
+FlipFlop fifo_1/rd_ptr_0 has been replicated 1 time(s)
+FlipFlop fifo_1/rd_ptr_1 has been replicated 1 time(s)
+FlipFlop fifo_1/rd_ptr_2 has been replicated 1 time(s)
+FlipFlop fifo_1/wr_ptr_0 has been replicated 1 time(s)
+FlipFlop fifo_1/wr_ptr_1 has been replicated 1 time(s)
+FlipFlop fifo_1/wr_ptr_2 has been replicated 1 time(s)
+FlipFlop fifo_1/wr_ptr_3 has been replicated 1 time(s)
+FlipFlop fifo_2/rd_ptr_0 has been replicated 1 time(s)
+FlipFlop fifo_2/rd_ptr_1 has been replicated 1 time(s)
+FlipFlop fifo_2/rd_ptr_2 has been replicated 1 time(s)
+FlipFlop fifo_2/wr_ptr_0 has been replicated 1 time(s)
+FlipFlop fifo_2/wr_ptr_1 has been replicated 1 time(s)
+FlipFlop fifo_2/wr_ptr_2 has been replicated 1 time(s)
+FlipFlop fifo_2/wr_ptr_3 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 597
+ Flip-Flops                                            : 597
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : router_top.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 944
+#      INV                         : 7
+#      LUT2                        : 22
+#      LUT3                        : 31
+#      LUT4                        : 25
+#      LUT5                        : 55
+#      LUT6                        : 675
+#      MUXF7                       : 87
+#      MUXF8                       : 42
+# FlipFlops/Latches                : 597
+#      FD                          : 11
+#      FDR                         : 41
+#      FDRE                        : 545
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 42
+#      IBUF                        : 13
+#      OBUF                        : 5
+#      OBUFT                       : 24
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx4tqg144-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             597  out of   4800    12%  
+ Number of Slice LUTs:                  815  out of   2400    33%  
+    Number used as Logic:               815  out of   2400    33%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    868
+   Number with an unused Flip Flop:     271  out of    868    31%  
+   Number with an unused LUT:            53  out of    868     6%  
+   Number of fully used LUT-FF pairs:   544  out of    868    62%  
+   Number of unique control sets:        24
+
+IO Utilization: 
+ Number of IOs:                          43
+ Number of bonded IOBs:                  43  out of    102    42%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clock                              | BUFGP                  | 597   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 5.771ns (Maximum Frequency: 173.283MHz)
+   Minimum input arrival time before clock: 4.987ns
+   Maximum output required time after clock: 6.258ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clock'
+  Clock period: 5.771ns (frequency: 173.283MHz)
+  Total number of paths / destination ports: 17679 / 1635
+-------------------------------------------------------------------------
+Delay:               5.771ns (Levels of Logic = 3)
+  Source:            fifo_1/rd_ptr_3 (FF)
+  Destination:       fifo_1/mem_0_143 (FF)
+  Source Clock:      clock rising
+  Destination Clock: clock rising
+
+  Data Path: fifo_1/rd_ptr_3 to fifo_1/mem_0_143
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            17   0.447   1.028  fifo_1/rd_ptr_3 (fifo_1/rd_ptr_3)
+     LUT4:I3->O            4   0.205   0.684  fifo_1/empty51_SW0 (N18)
+     LUT6:I5->O            4   0.205   0.684  fifo_1/full1 (full_1)
+     LUT5:I4->O          144   0.205   1.992  fifo_1/write_enb_full_AND_41_o11 (fifo_1/write_enb_full_AND_41_o1)
+     FDRE:CE                   0.322          fifo_1/mem_0_0
+    ----------------------------------------
+    Total                      5.771ns (1.384ns logic, 4.387ns route)
+                                       (24.0% logic, 76.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clock'
+  Total number of paths / destination ports: 822 / 722
+-------------------------------------------------------------------------
+Offset:              4.987ns (Levels of Logic = 2)
+  Source:            resetn (PAD)
+  Destination:       fifo_2/wr_ptr_0 (FF)
+  Destination Clock: clock rising
+
+  Data Path: resetn to fifo_2/wr_ptr_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            21   1.222   1.114  resetn_IBUF (resetn_IBUF)
+     LUT2:I1->O          160   0.205   2.017  fifo_2/Reset_OR_DriverANDClockEnable1 (fifo_2/Reset_OR_DriverANDClockEnable)
+     FDRE:R                    0.430          fifo_2/mem_0_0
+    ----------------------------------------
+    Total                      4.987ns (1.857ns logic, 3.130ns route)
+                                       (37.2% logic, 62.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clock'
+  Total number of paths / destination ports: 81 / 29
+-------------------------------------------------------------------------
+Offset:              6.258ns (Levels of Logic = 3)
+  Source:            fifo_1/rd_ptr_0 (FF)
+  Destination:       vld_out_1 (PAD)
+  Source Clock:      clock rising
+
+  Data Path: fifo_1/rd_ptr_0 to vld_out_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            63   0.447   1.634  fifo_1/rd_ptr_0 (fifo_1/rd_ptr_0)
+     LUT2:I1->O            2   0.205   0.617  fifo_1/empty51_SW2 (N46)
+     LUT6:I5->O            1   0.205   0.579  synchronizer/vld_out_11 (vld_out_1_OBUF)
+     OBUF:I->O                 2.571          vld_out_1_OBUF (vld_out_1)
+    ----------------------------------------
+    Total                      6.258ns (3.428ns logic, 2.830ns route)
+                                       (54.8% logic, 45.2% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clock
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |    5.771|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.89 secs
+ 
+--> 
+
+
+Total memory usage is 377424 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    5 (   0 filtered)
+
