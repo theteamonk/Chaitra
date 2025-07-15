@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "/home/chacha/Router1x3/Register/Router_Register/router_register.xst" -ofn "/home/chacha/Router1x3/Register/Router_Register/router_register.syr" 
+xst -intstyle ise -ifn "/home/chacha/Router1x3/Register/Router_Register/router_register.xst" -ofn "/home/chacha/Router1x3/Register/Router_Register/router_register.syr" 
