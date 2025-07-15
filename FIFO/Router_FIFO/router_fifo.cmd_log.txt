@@ -1,0 +1,5 @@
+xst -intstyle ise -ifn "/home/chacha/Router1x3/FIFO/Router_FIFO/router_fifo.xst" -ofn "/home/chacha/Router1x3/FIFO/Router_FIFO/router_fifo.syr" 
+xst -intstyle ise -ifn "/home/chacha/Router1x3/FIFO/Router_FIFO/router_fifo.xst" -ofn "/home/chacha/Router1x3/FIFO/Router_FIFO/router_fifo.syr" 
+xst -intstyle ise -ifn "/home/chacha/Router1x3/FIFO/Router_FIFO/router_fifo.xst" -ofn "/home/chacha/Router1x3/FIFO/Router_FIFO/router_fifo.syr" 
+xst -intstyle ise -ifn "/home/chacha/Router1x3/FIFO/Router_FIFO/router_fifo.xst" -ofn "/home/chacha/Router1x3/FIFO/Router_FIFO/router_fifo.syr" 
+xst -intstyle ise -ifn "/home/chacha/Router1x3/FIFO/Router_FIFO/router_fifo.xst" -ofn "/home/chacha/Router1x3/FIFO/Router_FIFO/router_fifo.syr" 

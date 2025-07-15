@@ -1,0 +1,73 @@
+ISim log file
+Running: /home/chacha/Router1x3/FIFO/Router_FIFO/router_fifo_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/chacha/Router1x3/FIFO/Router_FIFO/router_fifo_tb_isim_beh.wdb 
+ISim P.20131013 (signature 0xfbc00daa)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+soft_reset = x, lfd_state = x, full = x,  empty = x, data_in = xxxxxxxx, data_out +xxxxxxxx, resetn = x, read_enb = 0, write_enb = 0, read_ptr = xxxxx, write_ptr = xxxxx, count = xxxxxxx
+soft_reset = x, lfd_state = x, full = x,  empty = x, data_in = xxxxxxxx, data_out +xxxxxxxx, resetn = 0, read_enb = 0, write_enb = 0, read_ptr = xxxxx, write_ptr = xxxxx, count = xxxxxxx
+soft_reset = x, lfd_state = x, full = 0,  empty = 1, data_in = xxxxxxxx, data_out +00000000, resetn = 0, read_enb = 0, write_enb = 0, read_ptr = 00000, write_ptr = 00000, count = 0000000
+soft_reset = x, lfd_state = x, full = 0,  empty = 1, data_in = xxxxxxxx, data_out +00000000, resetn = 1, read_enb = 0, write_enb = 0, read_ptr = 00000, write_ptr = 00000, count = 0000000
+soft_reset = x, lfd_state = x, full = 0,  empty = 1, data_in = xxxxxxxx, data_out +zzzzzzzz, resetn = 1, read_enb = 0, write_enb = 0, read_ptr = 00000, write_ptr = 00000, count = 0000000
+soft_reset = 1, lfd_state = x, full = 0,  empty = 1, data_in = xxxxxxxx, data_out +zzzzzzzz, resetn = 1, read_enb = 0, write_enb = 0, read_ptr = 00000, write_ptr = 00000, count = 0000000
+soft_reset = 0, lfd_state = x, full = 0,  empty = 1, data_in = xxxxxxxx, data_out +zzzzzzzz, resetn = 1, read_enb = 0, write_enb = 0, read_ptr = 00000, write_ptr = 00000, count = 0000000
+soft_reset = 0, lfd_state = 1, full = 0,  empty = 1, data_in = 00111001, data_out +zzzzzzzz, resetn = 1, read_enb = 0, write_enb = 0, read_ptr = 00000, write_ptr = 00000, count = 0000000
+soft_reset = 0, lfd_state = 0, full = 0,  empty = 1, data_in = 00111001, data_out +zzzzzzzz, resetn = 1, read_enb = 0, write_enb = 1, read_ptr = 00000, write_ptr = 00000, count = 0000000
+soft_reset = 0, lfd_state = 0, full = 0,  empty = 0, data_in = 00111001, data_out +zzzzzzzz, resetn = 1, read_enb = 0, write_enb = 1, read_ptr = 00000, write_ptr = 00001, count = 0000000
+soft_reset = 0, lfd_state = 0, full = 0,  empty = 0, data_in = 00100100, data_out +zzzzzzzz, resetn = 1, read_enb = 0, write_enb = 1, read_ptr = 00000, write_ptr = 00001, count = 0000000
+soft_reset = 0, lfd_state = 0, full = 0,  empty = 0, data_in = 00100100, data_out +zzzzzzzz, resetn = 1, read_enb = 0, write_enb = 1, read_ptr = 00000, write_ptr = 00010, count = 0001111
+soft_reset = 0, lfd_state = 0, full = 0,  empty = 0, data_in = 10000001, data_out +zzzzzzzz, resetn = 1, read_enb = 0, write_enb = 1, read_ptr = 00000, write_ptr = 00010, count = 0001111
+soft_reset = 0, lfd_state = 0, full = 0,  empty = 0, data_in = 10000001, data_out +zzzzzzzz, resetn = 1, read_enb = 0, write_enb = 1, read_ptr = 00000, write_ptr = 00011, count = 0001111
+soft_reset = 0, lfd_state = 0, full = 0,  empty = 0, data_in = 00001001, data_out +zzzzzzzz, resetn = 1, read_enb = 0, write_enb = 1, read_ptr = 00000, write_ptr = 00011, count = 0001111
+soft_reset = 0, lfd_state = 0, full = 0,  empty = 0, data_in = 00001001, data_out +zzzzzzzz, resetn = 1, read_enb = 0, write_enb = 1, read_ptr = 00000, write_ptr = 00100, count = 0001111
+soft_reset = 0, lfd_state = 0, full = 0,  empty = 0, data_in = 01100011, data_out +zzzzzzzz, resetn = 1, read_enb = 0, write_enb = 1, read_ptr = 00000, write_ptr = 00100, count = 0001111
+soft_reset = 0, lfd_state = 0, full = 0,  empty = 0, data_in = 01100011, data_out +zzzzzzzz, resetn = 1, read_enb = 0, write_enb = 1, read_ptr = 00000, write_ptr = 00101, count = 0001111
+soft_reset = 0, lfd_state = 0, full = 0,  empty = 0, data_in = 00001101, data_out +zzzzzzzz, resetn = 1, read_enb = 0, write_enb = 1, read_ptr = 00000, write_ptr = 00101, count = 0001111
+soft_reset = 0, lfd_state = 0, full = 0,  empty = 0, data_in = 00001101, data_out +zzzzzzzz, resetn = 1, read_enb = 0, write_enb = 1, read_ptr = 00000, write_ptr = 00110, count = 0001111
+soft_reset = 0, lfd_state = 0, full = 0,  empty = 0, data_in = 10001101, data_out +zzzzzzzz, resetn = 1, read_enb = 0, write_enb = 1, read_ptr = 00000, write_ptr = 00110, count = 0001111
+soft_reset = 0, lfd_state = 0, full = 0,  empty = 0, data_in = 10001101, data_out +zzzzzzzz, resetn = 1, read_enb = 0, write_enb = 1, read_ptr = 00000, write_ptr = 00111, count = 0001111
+soft_reset = 0, lfd_state = 0, full = 0,  empty = 0, data_in = 01100101, data_out +zzzzzzzz, resetn = 1, read_enb = 0, write_enb = 1, read_ptr = 00000, write_ptr = 00111, count = 0001111
+soft_reset = 0, lfd_state = 0, full = 0,  empty = 0, data_in = 01100101, data_out +zzzzzzzz, resetn = 1, read_enb = 0, write_enb = 1, read_ptr = 00000, write_ptr = 01000, count = 0001111
+soft_reset = 0, lfd_state = 0, full = 0,  empty = 0, data_in = 00010010, data_out +zzzzzzzz, resetn = 1, read_enb = 0, write_enb = 1, read_ptr = 00000, write_ptr = 01000, count = 0001111
+soft_reset = 0, lfd_state = 0, full = 0,  empty = 0, data_in = 00010010, data_out +zzzzzzzz, resetn = 1, read_enb = 0, write_enb = 1, read_ptr = 00000, write_ptr = 01001, count = 0001111
+soft_reset = 0, lfd_state = 0, full = 0,  empty = 0, data_in = 00000001, data_out +zzzzzzzz, resetn = 1, read_enb = 0, write_enb = 1, read_ptr = 00000, write_ptr = 01001, count = 0001111
+soft_reset = 0, lfd_state = 0, full = 0,  empty = 0, data_in = 00000001, data_out +zzzzzzzz, resetn = 1, read_enb = 0, write_enb = 1, read_ptr = 00000, write_ptr = 01010, count = 0001111
+soft_reset = 0, lfd_state = 0, full = 0,  empty = 0, data_in = 00001101, data_out +zzzzzzzz, resetn = 1, read_enb = 0, write_enb = 1, read_ptr = 00000, write_ptr = 01010, count = 0001111
+soft_reset = 0, lfd_state = 0, full = 0,  empty = 0, data_in = 00001101, data_out +zzzzzzzz, resetn = 1, read_enb = 0, write_enb = 1, read_ptr = 00000, write_ptr = 01011, count = 0001111
+soft_reset = 0, lfd_state = 0, full = 0,  empty = 0, data_in = 01110110, data_out +zzzzzzzz, resetn = 1, read_enb = 0, write_enb = 1, read_ptr = 00000, write_ptr = 01011, count = 0001111
+soft_reset = 0, lfd_state = 0, full = 0,  empty = 0, data_in = 01110110, data_out +zzzzzzzz, resetn = 1, read_enb = 0, write_enb = 1, read_ptr = 00000, write_ptr = 01100, count = 0001111
+soft_reset = 0, lfd_state = 0, full = 0,  empty = 0, data_in = 00111101, data_out +zzzzzzzz, resetn = 1, read_enb = 0, write_enb = 1, read_ptr = 00000, write_ptr = 01100, count = 0001111
+soft_reset = 0, lfd_state = 0, full = 0,  empty = 0, data_in = 00111101, data_out +zzzzzzzz, resetn = 1, read_enb = 0, write_enb = 1, read_ptr = 00000, write_ptr = 01101, count = 0001111
+soft_reset = 0, lfd_state = 0, full = 0,  empty = 0, data_in = 11101101, data_out +zzzzzzzz, resetn = 1, read_enb = 0, write_enb = 1, read_ptr = 00000, write_ptr = 01101, count = 0001111
+soft_reset = 0, lfd_state = 0, full = 0,  empty = 0, data_in = 11101101, data_out +zzzzzzzz, resetn = 1, read_enb = 0, write_enb = 1, read_ptr = 00000, write_ptr = 01110, count = 0001111
+soft_reset = 0, lfd_state = 0, full = 0,  empty = 0, data_in = 10001100, data_out +zzzzzzzz, resetn = 1, read_enb = 0, write_enb = 1, read_ptr = 00000, write_ptr = 01110, count = 0001111
+soft_reset = 0, lfd_state = 0, full = 0,  empty = 0, data_in = 10001100, data_out +zzzzzzzz, resetn = 1, read_enb = 0, write_enb = 1, read_ptr = 00000, write_ptr = 01111, count = 0001111
+soft_reset = 0, lfd_state = 0, full = 0,  empty = 0, data_in = 11111001, data_out +zzzzzzzz, resetn = 1, read_enb = 0, write_enb = 1, read_ptr = 00000, write_ptr = 01111, count = 0001111
+soft_reset = 0, lfd_state = 0, full = 1,  empty = 0, data_in = 11111001, data_out +zzzzzzzz, resetn = 1, read_enb = 0, write_enb = 1, read_ptr = 00000, write_ptr = 10000, count = 0001111
+soft_reset = 0, lfd_state = 0, full = 1,  empty = 0, data_in = 11111001, data_out +zzzzzzzz, resetn = 1, read_enb = 1, write_enb = 0, read_ptr = 00000, write_ptr = 10000, count = 0001111
+soft_reset = 0, lfd_state = 0, full = 0,  empty = 0, data_in = 11111001, data_out +00111001, resetn = 1, read_enb = 1, write_enb = 0, read_ptr = 00001, write_ptr = 10000, count = 0001111
+soft_reset = 0, lfd_state = 0, full = 0,  empty = 0, data_in = 11111001, data_out +00100100, resetn = 1, read_enb = 1, write_enb = 0, read_ptr = 00010, write_ptr = 10000, count = 0001110
+soft_reset = 0, lfd_state = 0, full = 0,  empty = 0, data_in = 11111001, data_out +10000001, resetn = 1, read_enb = 1, write_enb = 0, read_ptr = 00011, write_ptr = 10000, count = 0001101
+soft_reset = 0, lfd_state = 0, full = 0,  empty = 0, data_in = 11111001, data_out +00001001, resetn = 1, read_enb = 1, write_enb = 0, read_ptr = 00100, write_ptr = 10000, count = 0001100
+soft_reset = 0, lfd_state = 0, full = 0,  empty = 0, data_in = 11111001, data_out +01100011, resetn = 1, read_enb = 1, write_enb = 0, read_ptr = 00101, write_ptr = 10000, count = 0001011
+soft_reset = 0, lfd_state = 0, full = 0,  empty = 0, data_in = 11111001, data_out +00001101, resetn = 1, read_enb = 1, write_enb = 0, read_ptr = 00110, write_ptr = 10000, count = 0001010
+soft_reset = 0, lfd_state = 0, full = 0,  empty = 0, data_in = 11111001, data_out +10001101, resetn = 1, read_enb = 1, write_enb = 0, read_ptr = 00111, write_ptr = 10000, count = 0001001
+soft_reset = 0, lfd_state = 0, full = 0,  empty = 0, data_in = 11111001, data_out +01100101, resetn = 1, read_enb = 1, write_enb = 0, read_ptr = 01000, write_ptr = 10000, count = 0001000
+soft_reset = 0, lfd_state = 0, full = 0,  empty = 0, data_in = 11111001, data_out +00010010, resetn = 1, read_enb = 1, write_enb = 0, read_ptr = 01001, write_ptr = 10000, count = 0000111
+soft_reset = 0, lfd_state = 0, full = 0,  empty = 0, data_in = 11111001, data_out +00000001, resetn = 1, read_enb = 1, write_enb = 0, read_ptr = 01010, write_ptr = 10000, count = 0000110
+soft_reset = 0, lfd_state = 0, full = 0,  empty = 0, data_in = 11111001, data_out +00001101, resetn = 1, read_enb = 1, write_enb = 0, read_ptr = 01011, write_ptr = 10000, count = 0000101
+soft_reset = 0, lfd_state = 0, full = 0,  empty = 0, data_in = 11111001, data_out +01110110, resetn = 1, read_enb = 1, write_enb = 0, read_ptr = 01100, write_ptr = 10000, count = 0000100
+soft_reset = 0, lfd_state = 0, full = 0,  empty = 0, data_in = 11111001, data_out +00111101, resetn = 1, read_enb = 1, write_enb = 0, read_ptr = 01101, write_ptr = 10000, count = 0000011
+soft_reset = 0, lfd_state = 0, full = 0,  empty = 0, data_in = 11111001, data_out +11101101, resetn = 1, read_enb = 1, write_enb = 0, read_ptr = 01110, write_ptr = 10000, count = 0000010
+soft_reset = 0, lfd_state = 0, full = 0,  empty = 0, data_in = 11111001, data_out +10001100, resetn = 1, read_enb = 1, write_enb = 0, read_ptr = 01111, write_ptr = 10000, count = 0000001
+soft_reset = 0, lfd_state = 0, full = 0,  empty = 1, data_in = 11111001, data_out +11111001, resetn = 1, read_enb = 1, write_enb = 0, read_ptr = 10000, write_ptr = 10000, count = 0000000
+soft_reset = 0, lfd_state = 0, full = 0,  empty = 1, data_in = 11111001, data_out +zzzzzzzz, resetn = 1, read_enb = 1, write_enb = 0, read_ptr = 10000, write_ptr = 10000, count = 0001111
+Stopped at time : 415 ns : File "/home/chacha/Router1x3/FIFO/router_fifo_code/router_fifo_tb.v" Line 114
+# exit 0
