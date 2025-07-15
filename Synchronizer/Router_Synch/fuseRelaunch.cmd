@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "/home/chacha/Router1x3/Synchronizer/Router_Synch/router_syn_tb_isim_beh.exe" -prj "/home/chacha/Router1x3/Synchronizer/Router_Synch/router_syn_tb_beh.prj" "work.router_syn_tb" "work.glbl" 

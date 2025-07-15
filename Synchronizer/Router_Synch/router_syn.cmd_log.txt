@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "/home/chacha/Router1x3/Synchronizer/Router_Synch/router_syn.xst" -ofn "/home/chacha/Router1x3/Synchronizer/Router_Synch/router_syn.syr" 
