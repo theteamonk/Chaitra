@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "/home/chacha/Router1x3/FSM/Router_FSM/router_fsm_tb_isim_beh.exe" -prj "/home/chacha/Router1x3/FSM/Router_FSM/router_fsm_tb_beh.prj" "work.router_fsm_tb" "work.glbl" 

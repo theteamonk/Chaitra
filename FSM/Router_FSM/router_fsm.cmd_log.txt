@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "/home/chacha/Router1x3/FSM/Router_FSM/router_fsm.xst" -ofn "/home/chacha/Router1x3/FSM/Router_FSM/router_fsm.syr" 
+xst -intstyle ise -ifn "/home/chacha/Router1x3/FSM/Router_FSM/router_fsm.xst" -ofn "/home/chacha/Router1x3/FSM/Router_FSM/router_fsm.syr" 

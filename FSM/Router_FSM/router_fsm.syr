@@ -1,0 +1,406 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.05 secs
+ 
+--> 
+Reading design: router_fsm.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "router_fsm.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "router_fsm"
+Output Format                      : NGC
+Target Device                      : xc6slx4-3-tqg144
+
+---- Source Options
+Top Module Name                    : router_fsm
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/chacha/Router1x3/FSM/router_fsm_code/router_fsm.v" into library work
+Parsing module <router_fsm>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <router_fsm>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <router_fsm>.
+    Related source file is "/home/chacha/Router1x3/FSM/router_fsm_code/router_fsm.v".
+        DECODE_ADDRESS = 3'b000
+        WAIT_TILL_EMPTY = 3'b001
+        LOAD_FIRST_DATA = 3'b010
+        LOAD_DATA = 3'b011
+        LOAD_PARITY = 3'b100
+        FIFO_FULL_STATE = 3'b101
+        LOAD_AFTER_FULL = 3'b110
+        CHECK_PARITY_ERROR = 3'b111
+    Found 3-bit register for signal <present_state>.
+    Found 2-bit register for signal <addr>.
+    Found finite state machine <FSM_0> for signal <present_state>.
+    -----------------------------------------------------------------------
+    | States             | 8                                              |
+    | Transitions        | 25                                             |
+    | Inputs             | 8                                              |
+    | Outputs            | 8                                              |
+    | Clock              | clock (rising_edge)                            |
+    | Reset              | resetn_INV_2_o (positive)                      |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 000                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred   2 D-type flip-flop(s).
+	inferred   1 Finite State Machine(s).
+Unit <router_fsm> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 1
+ 2-bit register                                        : 1
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 2
+ Flip-Flops                                            : 2
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <present_state[1:3]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 000
+ 001   | 001
+ 010   | 011
+ 011   | 010
+ 100   | 110
+ 101   | 111
+ 111   | 101
+ 110   | 100
+-------------------
+
+Optimizing unit <router_fsm> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block router_fsm, actual ratio is 1.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 5
+ Flip-Flops                                            : 5
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : router_fsm.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 21
+#      INV                         : 2
+#      LUT2                        : 3
+#      LUT3                        : 7
+#      LUT4                        : 3
+#      LUT5                        : 1
+#      LUT6                        : 5
+# FlipFlops/Latches                : 5
+#      FDR                         : 3
+#      FDRE                        : 2
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 21
+#      IBUF                        : 13
+#      OBUF                        : 8
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx4tqg144-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:               5  out of   4800     0%  
+ Number of Slice LUTs:                   21  out of   2400     0%  
+    Number used as Logic:                21  out of   2400     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     21
+   Number with an unused Flip Flop:      16  out of     21    76%  
+   Number with an unused LUT:             0  out of     21     0%  
+   Number of fully used LUT-FF pairs:     5  out of     21    23%  
+   Number of unique control sets:         2
+
+IO Utilization: 
+ Number of IOs:                          22
+ Number of bonded IOBs:                  22  out of    102    21%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clock                              | BUFGP                  | 5     |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 2.574ns (Maximum Frequency: 388.455MHz)
+   Minimum input arrival time before clock: 3.681ns
+   Maximum output required time after clock: 4.963ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clock'
+  Clock period: 2.574ns (frequency: 388.455MHz)
+  Total number of paths / destination ports: 21 / 7
+-------------------------------------------------------------------------
+Delay:               2.574ns (Levels of Logic = 2)
+  Source:            present_state_FSM_FFd2 (FF)
+  Destination:       present_state_FSM_FFd2 (FF)
+  Source Clock:      clock rising
+  Destination Clock: clock rising
+
+  Data Path: present_state_FSM_FFd2 to present_state_FSM_FFd2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             13   0.447   1.037  present_state_FSM_FFd2 (present_state_FSM_FFd2)
+     LUT4:I2->O            1   0.203   0.580  present_state_FSM_FFd2-In13 (present_state_FSM_FFd2-In13)
+     LUT6:I5->O            1   0.205   0.000  present_state_FSM_FFd2-In14 (present_state_FSM_FFd2-In1)
+     FDR:D                     0.102          present_state_FSM_FFd2
+    ----------------------------------------
+    Total                      2.574ns (0.957ns logic, 1.617ns route)
+                                       (37.2% logic, 62.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clock'
+  Total number of paths / destination ports: 41 / 10
+-------------------------------------------------------------------------
+Offset:              3.681ns (Levels of Logic = 3)
+  Source:            data_in<1> (PAD)
+  Destination:       present_state_FSM_FFd2 (FF)
+  Destination Clock: clock rising
+
+  Data Path: data_in<1> to present_state_FSM_FFd2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   1.222   1.028  data_in_1_IBUF (data_in_1_IBUF)
+     LUT6:I1->O            1   0.203   0.924  present_state_FSM_FFd2-In11 (present_state_FSM_FFd2-In11)
+     LUT6:I1->O            1   0.203   0.000  present_state_FSM_FFd2-In14 (present_state_FSM_FFd2-In1)
+     FDR:D                     0.102          present_state_FSM_FFd2
+    ----------------------------------------
+    Total                      3.681ns (1.730ns logic, 1.951ns route)
+                                       (47.0% logic, 53.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clock'
+  Total number of paths / destination ports: 23 / 8
+-------------------------------------------------------------------------
+Offset:              4.963ns (Levels of Logic = 2)
+  Source:            present_state_FSM_FFd3 (FF)
+  Destination:       detect_add (PAD)
+  Source Clock:      clock rising
+
+  Data Path: present_state_FSM_FFd3 to detect_add
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             13   0.447   1.161  present_state_FSM_FFd3 (present_state_FSM_FFd3)
+     LUT3:I0->O            1   0.205   0.579  present_state_ld_state1 (ld_state_OBUF)
+     OBUF:I->O                 2.571          ld_state_OBUF (ld_state)
+    ----------------------------------------
+    Total                      4.963ns (3.223ns logic, 1.740ns route)
+                                       (64.9% logic, 35.1% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clock
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |    2.574|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 2.85 secs
+ 
+--> 
+
+
+Total memory usage is 375756 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+
